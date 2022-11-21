@@ -24,7 +24,14 @@ def playerChoice():
   1: paper
   2: scissors
   '''
-  return value
+  x = input("Enter a choice: ").strip()
+  if x == "0" or x == "rock": y = 0
+  elif x == "1" or x == "paper": y=  1
+  elif x == "2" or x == "scissors": y= 2
+  else: y= "invalid input"
+  return y
+
+
 
 
 if __name__ == "__main__":

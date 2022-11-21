@@ -19,8 +19,24 @@ Output:
 
 def playerWins(computer,player):
   
-  return 0
-
+  if computer == player: 
+    i = 0
+  elif computer == 0 and player == 1: 
+    i = 1
+  elif computer == 1 and player == 2: 
+    i = 1
+  elif computer == 2 and player == 0: 
+    i = 1
+  elif computer == 0 and player == 2:
+     i = -1
+  elif computer == 1 and player == 0: 
+    i = -1
+  elif computer == 2 and player == 1: 
+    i = -1
+  else: i = print("Invalid")
+  
+  return i
+print(playerWins(1,2))
 if __name__ == "__main__":
   assert playerWins(1,1) == 0
   assert playerWins(1,0) == -1
